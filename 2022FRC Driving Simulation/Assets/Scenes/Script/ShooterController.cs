@@ -11,7 +11,7 @@ public class ShooterController : MonoBehaviour
 
     private void Update(){
         float HorizontalRotation = Input.GetAxis("AimingHorizontal");
-        float VerticalRotation = Input.GetAxis("AimingVertical");
+        float VerticalRotation = Input.GetAxis("AimingVertical") * -1;
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0,HorizontalRotation * rotationSpeed, VerticalRotation * rotationSpeed));
         //turn shooter point higher or lower
         if(Input.GetKeyDown(KeyCode.Space) && ScoreSystem.theBalls > 0){
