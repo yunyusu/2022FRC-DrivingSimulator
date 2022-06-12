@@ -36,7 +36,8 @@ public class ClockController : MonoBehaviour
             minString -= 1;
         }
         else{        }*/
-        timeText.text = minuteString + ":" + secondString;}
+        timeText.text = minuteString + ":" + secondString;
+        }
         if(daynormalized * 24 * 60 * 60 >=150) timeUp = true;
     }
 }
